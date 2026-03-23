@@ -1,0 +1,37 @@
+/* Uso de Google Fonts y unidades relativas  */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Organización con Flexbox para las tarjetas  */
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.tarjeta {
+    flex: 1 1 300px; /* Responsividad con unidades relativas  */
+    border: 1px solid #ccc;
+    padding: 1rem;
+    transition: transform 0.3s ease; /* Animación/Transición obligatoria  */
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para formularios y botones  */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
