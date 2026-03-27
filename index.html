@@ -3,84 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - David Fernando</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Portafolio Personal de David Fernando</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+    <!-- Header con el título principal y una breve introducción del portafolio -->
+    <header>
+        <h1>Alex Luna</h1>
+        <p class="subtitulo">Desarrollador Front-end creativo enfocado en experiencias accesibles.</p>
+    </header>
+
+    <!-- Barra de navegación con enlaces a las secciones del sitio -->
     <nav>
         <ul>
-            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#tarjetas">Proyectos</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#peliculas">Películas</a></li>
         </ul>
     </nav>
 
     <main>
+        <!-- Sección de presentación personal con imagen descriptiva -->
         <section id="sobre-mi">
-            <h1>David Fernando</h1>
-            <p>Programador y estudiante de la Tecnicatura Superior en Desarrollo de Software en el IFTS N.° 29. Soy una persona proactiva, detallista y autodidacta, con un fuerte compromiso hacia el aprendizaje continuo.</p>
+            <h2>Presentación Personal</h2>
+            <p>Soy Alex, un desarrollador web apasionado por crear interfaces limpias y usables. Me intereso por la accesibilidad, el diseño responsivo y las soluciones que se adaptan a diferentes dispositivos.</p>
+            <img src="img/perfil.png" alt="Avatar de perfil ficticio" class="imagen-perfil">
         </section>
 
+        <!-- Sección de tarjetas con proyectos destacados organizados en columnas -->
         <section id="tarjetas">
-            <h2>Formación y Certificaciones</h2>
-            <div class="contenedor-tarjetas">
+            <h2>Proyectos Destacados</h2>
+            <div class="contenedor-flex">
                 <article class="tarjeta">
-                    <h3>Diplomatura en Java</h3>
-                    <p>Centro de e-Learning UTN FRBA.</p>
+                    <img src="img/proyecto1.png" alt="Icono de proyecto" class="icono-tarjeta">
+                    <h3>Landing Page React</h3>
+                    <p>Proyecto de interfaz responsiva con componentes reutilizables y accesibilidad mejorada.</p>
                 </article>
                 <article class="tarjeta">
-                    <h3>Web Full Stack</h3>
-                    <p>Experto Universitario - UTN FRBA.</p>
+                    <img src="img/proyecto2.png" alt="Icono de proyecto" class="icono-tarjeta">
+                    <h3>App de Tareas</h3>
+                    <p>Aplicación para organizar tareas con filtros y almacenamiento local.</p>
                 </article>
                 <article class="tarjeta">
-                    <h3>Python & Data Science</h3>
-                    <p>Especialización en Big Data esencial.</p>
+                    <img src="img/proyecto1.png" alt="Icono de proyecto" class="icono-tarjeta">
+                    <h3>Portafolio UX</h3>
+                    <p>Diseño de experiencia de usuario basado en buenas prácticas de navegación.</p>
                 </article>
             </div>
         </section>
 
+        <!-- Sección de habilidades con tabla y lista adicional de intereses -->
         <section id="habilidades">
-            <h2>Aptitudes Principales</h2>
-            <ul>
-                <li>Desarrollo de Videojuegos.</li>
-                <li>Modelado 3D y Animación Gráfica.</li>
-                <li>Análisis de Datos y Big Data.</li>
-                <li>Programación en COBOL y Java.</li>
-            </ul>
+            <h2>Habilidades Técnicas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tecnología</th>
+                        <th>Nivel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5 y CSS3</td>
+                        <td>Dominado</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td>React</td>
+                        <td>En aprendizaje</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="lista-adicional">
+                <h3>Hobbies y metas</h3>
+                <ul>
+                    <li>Diseño de interfaces</li>
+                    <li>Aprender TypeScript</li>
+                    <li>Crear experiencias accesibles</li>
+                </ul>
+            </div>
         </section>
 
+        <!-- Formulario de contacto con los campos requeridos -->
         <section id="contacto">
             <h2>Contacto</h2>
-            <form>
-                <input type="text" placeholder="Nombre" required>
-                <input type="email" value="david@gmail.com" readonly> <textarea placeholder="Escribe tu mensaje aquí..."></textarea>
-                <button type="submit">Enviar Mensaje</button>
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required placeholder="Apellido">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">
+
+                <label for="tel">Teléfono:</label>
+                <input type="tel" id="tel" name="tel" placeholder="Teléfono">
+
+                <button type="submit">Enviar</button>
             </form>
         </section>
 
+        <!-- Sección de películas favoritas con título, imagen y descripción -->
         <section id="peliculas">
-            <h2>Intereses Culturales</h2>
-            <table>
-                <tr>
-                    <th>Categoría</th>
-                    <th>Interés</th>
-                </tr>
-                <tr>
-                    <td>Tecnología</td>
-                    <td>Sistemas Web Frontend</td>
-                </tr>
-                <tr>
-                    <td>Software</td>
-                    <td>Open Source y DevTools</td>
-                </tr>
-            </table>
+            <h2>Películas Favoritas</h2>
+            <div class="peliculas-grid">
+                <article class="pelicula">
+                    <img src="img/TheNeverEndingStory.jpg" alt="Cartel de The Neverending Story">
+                    <h3>The Neverending Story</h3>
+                    <p>Un clásico de fantasía que inspira creatividad y aventura.</p>
+                </article>
+                <article class="pelicula">
+                    <img src="img/TheNeverEndingStory.jpg" alt="Cartel de Laberinto">
+                    <h3>Laberinto</h3>
+                    <p>Un sueño mágico que desafía la realidad.</p>
+                </article>
+                <article class="pelicula">
+                    <img src="img/TheNeverEndingStory.jpg" alt="Cartel de E.T.">
+                    <h3>E.T.</h3>
+                    <p>Una historia fantástica de una amistad sin límites entre seres de distintos mundos.</p>
+                </article>
+            </div>
         </section>
     </main>
 
+    <!-- Footer con enlaces adicionales y datos del proyecto -->
     <footer>
-        <p>© 2026 - David Fernando | <a href="https://github.com/davidfg00077">GitHub</a></p>
+        <p>Redes sociales ficticias: <a href="#">GitHub</a> - <a href="#">LinkedIn</a></p>
+        <p>Trabajo Práctico Obligatorio 1 - Portafolio Personal.</p>
     </footer>
+
 </body>
 </html>
